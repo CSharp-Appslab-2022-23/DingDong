@@ -12,6 +12,11 @@ namespace DingDong
             var dongEnergy = int.Parse(dingDongEnergies[1]);
             string monsterShout = Console.ReadLine().ToUpper();
 
+            Console.WriteLine(DingDong(dingEnergy, dongEnergy, monsterShout));
+        }
+
+        private static int DingDong(int dingEnergy, int dongEnergy, string monsterShout)
+        {
             var totalEnergyUsed = 0;
 
             var alreadyProcessedChars = new List<char>();
@@ -24,14 +29,7 @@ namespace DingDong
 
                 alreadyProcessedChars.Add(c);
 
-                var cCount = 0;
-                foreach (char t in monsterShout)
-                {
-                    if (c == t)
-                    {
-                        cCount++;
-                    }
-                }
+                var cCount = CountCharOccurrences(c, monsterShout);
 
                 int cDingPrice = cCount * dingEnergy;
                 int cDongPrice = ((int)c - (int)'A') * dongEnergy;
@@ -39,7 +37,21 @@ namespace DingDong
                 totalEnergyUsed += Math.Min(cDingPrice, cDongPrice);
             }
 
-            Console.WriteLine(totalEnergyUsed);
+            return totalEnergyUsed;
+        }
+
+        private static int CountCharOccurrences(char c, string monsterShout)
+        {
+            var cCount = 0;
+            foreach (char t in monsterShout)
+            {
+                if (c == t)
+                {
+                    cCount++;
+                }
+            }
+
+            return cCount;
         }
     }
 }
