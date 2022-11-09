@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DingDong", "DingDong\DingDong.csproj", "{248F3652-D53F-42EF-B22C-45968E244B93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{248F3652-D53F-42EF-B22C-45968E244B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248F3652-D53F-42EF-B22C-45968E244B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248F3652-D53F-42EF-B22C-45968E244B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248F3652-D53F-42EF-B22C-45968E244B93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FADB1781-608E-42DB-A8C8-D49678A467E8}
+	EndGlobalSection
+EndGlobal
