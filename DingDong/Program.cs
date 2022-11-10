@@ -12,6 +12,11 @@ namespace DingDong
             var dongEnergy = int.Parse(dingDongEnergies[1]);
             string monsterShout = Console.ReadLine().ToUpper();
 
+            Warrior merlin = new Warrior();
+            Monster godzilla = new Monster();
+            merlin.Kill(godzilla);
+
+
             Console.WriteLine(DingDong(dingEnergy, dongEnergy, monsterShout));
         }
 
