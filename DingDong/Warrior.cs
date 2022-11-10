@@ -6,7 +6,7 @@ namespace DingDong
 {
     class Warrior
     {
-        internal void Kill(object godzilla)
+        internal int Kill(Monster godzilla)
         {
             throw new NotImplementedException();
         }

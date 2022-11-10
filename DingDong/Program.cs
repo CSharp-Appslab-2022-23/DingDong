@@ -7,17 +7,16 @@ namespace DingDong
     {
         private static void Main(string[] args)
         {
-            string[] dingDongEnergies = Console.ReadLine().Split(' ');
-            var dingEnergy = int.Parse(dingDongEnergies[0]);
-            var dongEnergy = int.Parse(dingDongEnergies[1]);
-            string monsterShout = Console.ReadLine().ToUpper();
+            //string[] dingDongEnergies = Console.ReadLine().Split(' ');
+            //var dingEnergy = int.Parse(dingDongEnergies[0]);
+            //var dongEnergy = int.Parse(dingDongEnergies[1]);
+            //string monsterShout = Console.ReadLine().ToUpper();
 
             Warrior merlin = new Warrior();
             Monster godzilla = new Monster();
-            merlin.Kill(godzilla);
+            int totalEnergyUsed = merlin.Kill(godzilla);
 
-
-            Console.WriteLine(DingDong(dingEnergy, dongEnergy, monsterShout));
+            Console.WriteLine(totalEnergyUsed);
         }
 
         private static int DingDong(int dingEnergy, int dongEnergy, string monsterShout)
