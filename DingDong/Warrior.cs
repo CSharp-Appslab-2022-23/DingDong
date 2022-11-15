@@ -6,13 +6,13 @@ namespace DingDong
 {
     class Warrior
     {
-        private int dingEnergy;
-        private int dongEnergy;
+        private readonly int dingEnergy;
+        private readonly int dongEnergy;
 
-        public Warrior(int v1, int v2)
+        public Warrior(int dingEnergy, int dongEnergy)
         {
-            dingEnergy = v1;
-            dongEnergy = v2;
+            this.dingEnergy = dingEnergy;
+            this.dongEnergy = dongEnergy;
         }
 
         internal int Kill(Monster monster)
