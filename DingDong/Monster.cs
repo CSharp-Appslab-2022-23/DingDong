@@ -6,5 +6,11 @@ namespace DingDong
 {
     class Monster
     {
+        public string Shout;
+
+        public Monster(string monsterShout)
+        {
+            Shout = monsterShout;
+        }
     }
 }
