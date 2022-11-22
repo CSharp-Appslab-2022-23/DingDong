@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using DingDong.Weapons;
 
 namespace DingDong
 {
@@ -9,10 +9,16 @@ namespace DingDong
         private readonly int dingEnergy;
         private readonly int dongEnergy;
 
+        private readonly Sword sword;
+        private readonly Hammer hammer;
+
         public Warrior(int dingEnergy, int dongEnergy)
         {
             this.dingEnergy = dingEnergy;
             this.dongEnergy = dongEnergy;
+
+            sword = new Sword();
+            hammer = new Hammer();
         }
 
         internal int Kill(Monster monster)
@@ -29,29 +35,13 @@ namespace DingDong
 
                 alreadyProcessedChars.Add(c);
 
-                var cCount = CountCharOccurrences(c, monster.Shout);
+                int swordAttackPrice = sword.Attack(c, monster.Shout) * dingEnergy;
+                int hammerAttackPrice = hammer.Attack(c, monster.Shout) * dongEnergy;
 
-                int cDingPrice = cCount * dingEnergy;
-                int cDongPrice = ((int)c - (int)'A') * dongEnergy;
-
-                totalEnergyUsed += Math.Min(cDingPrice, cDongPrice);
+                totalEnergyUsed += Math.Min(swordAttackPrice, hammerAttackPrice);
             }
 
             return totalEnergyUsed;
-        }
-
-        private static int CountCharOccurrences(char c, string monsterShout)
-        {
-            var cCount = 0;
-            foreach (char t in monsterShout)
-            {
-                if (c == t)
-                {
-                    cCount++;
-                }
-            }
-
-            return cCount;
         }
     }
 }
