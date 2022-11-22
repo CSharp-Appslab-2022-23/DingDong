@@ -2,6 +2,13 @@
 {
     class Sword
     {
+        private string name;
+
+        public Sword()
+        {
+            name = "meč";
+        }
+
         public int Attack(char c, string monsterShout)
         {
             return CountCharOccurrences(c, monsterShout);
