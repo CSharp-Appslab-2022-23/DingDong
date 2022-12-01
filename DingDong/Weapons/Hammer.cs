@@ -1,15 +1,12 @@
 ﻿namespace DingDong.Weapons
 {
-    class Hammer
+    class Hammer : Weapon
     {
-        private string name;
-
-        public Hammer()
+        public Hammer() : base("kladivo")
         {
-            name = "kladivo";
         }
 
-        public int Attack(char c, string monsterShout)
+        protected override int Attack(char c, string monsterShout)
         {
             return ((int)c - (int)'A');
         }

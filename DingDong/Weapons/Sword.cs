@@ -1,15 +1,12 @@
 ﻿namespace DingDong.Weapons
 {
-    class Sword
+    class Sword : Weapon
     {
-        private string name;
-
-        public Sword()
+        public Sword() : base("meč")
         {
-            name = "meč";
         }
 
-        public int Attack(char c, string monsterShout)
+        protected override int Attack(char c, string monsterShout)
         {
             return CountCharOccurrences(c, monsterShout);
         }
